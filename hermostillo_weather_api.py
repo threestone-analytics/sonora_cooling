@@ -50,7 +50,7 @@ def get_weather_data():
 
         df = pd.DataFrame(weather_dic, columns=columns)
         weather_datadf_list.append(df)
-        #sleep(300) # Seconds
+        sleep(300) # Seconds
 
     df_weather = pd.concat(weather_datadf_list,axis=0)
     	# CREATE TABLE hermosillo_weather (
@@ -67,7 +67,7 @@ def get_weather_data():
         
     # Add table to psql table
     df_weather = pd.concat(weather_datadf_list,axis=0)
-    engine = create_engine('postgresql://diego:password@localhost:5432/sonora_sensors')
+    engine = create_engine('postgresql://diego:E4SJq3yxNA@localhost:5432/sonora_sensors')
     df_weather.to_sql('hermosillo_weather', engine, if_exists='append')
     return(print("Weather updated!"))
 
