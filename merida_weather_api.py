@@ -70,7 +70,8 @@ df_weather = pd.concat(weather_datadf_list,axis=0)
 df_weather = pd.concat(weather_datadf_list,axis=0)
 engine = create_engine('postgresql://diego:E4SJq3yxNA@localhost:5432/sonora_sensors')
 df_weather.to_sql('merida_weather', engine, if_exists='append')
-return(print("Weather updated!"))
+print("Weather Updated!")
+#return(print("Weather updated!"))
 
 # ##### Set as function and run
 # print("Successful Ran")
