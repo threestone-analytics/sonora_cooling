@@ -9,8 +9,6 @@ from sqlalchemy import create_engine
 from datetime import datetime
 from pytz import timezone
 
-
-
 #Make the request
 def get_weather_data():
     weather_datadf_list = []
@@ -75,7 +73,3 @@ def get_weather_data():
 if __name__ == "__main__":
 
 	get_weather_data()
-
-
-
-    
