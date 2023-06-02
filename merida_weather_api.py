@@ -1,3 +1,7 @@
+#/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+#Import libraries
 import pyowm
 import pandas as pd
 from time import sleep
