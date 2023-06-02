@@ -1,4 +1,4 @@
-#/usr/bin/python3
+#!/home/ubuntu/sonora_cooling/venv/bin python3.9
 # -*- coding: utf-8 -*-
 
 #Import libraries
@@ -69,6 +69,7 @@ def get_weather_data():
     df_weather = pd.concat(weather_datadf_list,axis=0)
     engine = create_engine('postgresql://diego:E4SJq3yxNA@localhost:5432/sonora_sensors')
     df_weather.to_sql('hermosillo_weather', engine, if_exists='append')
+    print(df_weather)
     return(print("Weather updated!"))
 
 ##### Set as function and run
