@@ -65,6 +65,7 @@ def get_weather_data():
 	    #  sunset_time timestamp without time zone
 	    #    	);
 
+
 	# Add table to psql table
 	df_weather = pd.concat(weather_datadf_list,axis=0)
 	engine = create_engine('postgresql://diego:E4SJq3yxNA@localhost:5432/sonora_sensors')
@@ -72,7 +73,7 @@ def get_weather_data():
 	return(print("Weather updated!"))
 
 # ##### Set as function and run
-print("Successful Run")
+
 if __name__ == "__main__":
 
 	get_weather_data()
